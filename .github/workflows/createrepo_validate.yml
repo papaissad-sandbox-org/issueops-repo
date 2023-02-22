@@ -13,7 +13,7 @@ jobs:
     if: contains(github.event.issue.labels.*.name, 'createrepo') && github.event.issue.state == 'open'
     steps:
       - name: Validate
-        uses: papaissad-sandbox-org/issueops-repo/.github/workflows/createrepo_validate.yml@main
+        uses: papaissad-sandbox-org/issueops-repo/validate@v1
         with:
           authentication: app
           application-id: ${{ secrets.APP_ID }}
