@@ -20,7 +20,8 @@ body:
       label: Repository owner
       description: Select an owner
       options:
-        - tinyfists
+        - papaissad
+        - sparlant
     validations:
       required: true
   - type: input
