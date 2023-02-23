@@ -8,11 +8,11 @@ env:
 jobs:
   fulfill:
     name: Fulfill issue
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     if: contains(github.event.issue.labels.*.name, 'createrepo') && github.event.issue.state == 'open' && startsWith(github.event.comment.body, '/lgtm')
     steps:
       - name: Fulfill
-        uses: papaissad-sandbox-org/issueops-repo/fulfill@v1
+        uses: papaissad-sandbox-org/issueops-repo/fulfill@main
         with:
           authentication: app
           application-id: ${{ secrets.APP_ID }}
