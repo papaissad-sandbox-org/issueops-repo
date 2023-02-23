@@ -9,11 +9,11 @@ env:
 jobs:
   validate:
     name: Validate issue
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     if: contains(github.event.issue.labels.*.name, 'createrepo') && github.event.issue.state == 'open'
     steps:
       - name: Validate
-        uses: papaissad-sandbox-org/issueops-repo/validate@main
+        uses: andyfeller/issueops-createrepo/validate@v1
         with:
           authentication: app
           application-id: ${{ secrets.APP_ID }}
